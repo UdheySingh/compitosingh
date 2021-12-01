@@ -55,10 +55,10 @@ public class ClientChat
             {
                 for(;;) 
                 {
-                    String mex = input.readLine();
-                    if(mex.equalsIgnoreCase("FINE")) 
+                    String in = input.readLine();
+                    if(in.equalsIgnoreCase("FINE")) 
                     {
-                        outToServer.writeBytes(mex + '\n');
+                        outToServer.writeBytes(in + '\n');
                         outToServer.writeBytes("Connessione in chiusura..." + '\n');                      
                         close();
                         break;
@@ -109,8 +109,8 @@ public class ClientChat
             {
                 for(;;) 
                 {
-                    String mex = inFromServer.readLine();
-                    if(mex != null) System.out.println(mex);
+                    String in = inFromServer.readLine();
+                    if(in != null) System.out.println(in);
                 }
             }
             catch (Exception ex) 
